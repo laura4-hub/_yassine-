@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Legend of Yassine</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<filter id="rough" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".14" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter>
+<filter id="stub" filterUnits="userSpaceOnUse" x="0" y="0" width="120" height="150"><feTurbulence type="fractalNoise" baseFrequency=".95" numOctaves="2"/><feColorMatrix values="0 0 0 0 .07 0 0 0 0 .04 0 0 0 0 .02 16 0 0 0 -7"/></filter>
+<filter id="film" filterUnits="userSpaceOnUse" x="0" y="0" width="120" height="150"><feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="1"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .5 0 0 0 -.12"/></filter>
+</defs></svg>
+<div id="music">
+  <button id="mbtn" title="Pause or play the birthday song">♪ Music on / off</button>
+</div>
+<audio id="aud" loop preload="auto"></audio>
+
+<section class="screen on" id="s1">
+  <div class="frame">
+    <div class="sub">Welcome to the game</div>
+    <div class="orn">⚔ ✦ ⚔</div>
+    <h1>Legend of Yassine</h1>
+    <div class="orn">— ✦ —</div>
+    <p style="font-family:Georgia,serif;font-style:italic;opacity:.85;margin-bottom:28px">Dedicate your heart. The war begins now.</p>
+    <button class="btn" id="start">Enter</button>
+  </div>
+</section>
+
+<section class="screen" id="s2">
+  <div class="frame">
+    <div class="sub">Chapter I</div>
+    <h2>What is your name, soldier?</h2>
+    <input type="text" id="name" maxlength="18" placeholder="Enter your name" autocomplete="off">
+    <br><button class="btn" id="next" disabled>Continue</button>
+  </div>
+</section>
+
+<section class="screen" id="s5"><div id="st" style="width:100%;max-width:560px"></div></section>
+
+<section class="screen" id="s6"><div id="sur" style="width:100%;max-width:640px"></div></section>
+
+<script src="script.js"></script>
+</body>
+</html>
